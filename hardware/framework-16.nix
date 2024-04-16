@@ -49,4 +49,22 @@
   services.fprintd.enable = true;
   # Enable firmware and UEFI updates.
   services.fwupd.enable = true;
+
+  # Graphics packages
+  hardware.opengl = {
+    enable = true;
+    driSupport.enable = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+      mangohud
+      gamescope
+      amdvlk
+    ];
+    extraPackages32 = with pkgs; [
+      mangohud
+      gamescope
+    ];
+  };
+  hardware.steam-hardware.enable = true;
 }

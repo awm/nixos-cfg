@@ -44,7 +44,18 @@
     lapce # Text editor
     
     # Gaming
-    discord
+    discord # Messaging
+    protontricks
+    protonup-qt
+    gamescope
+    (lutris.override {
+      extraPkgs = pkgs: [
+        gamescope
+        gamemode
+        mangohud
+      ];
+    })
+    gnomeExtensions.gamemode-indicator-in-system-settings
   ];
 
   programs.git = {
@@ -113,4 +124,9 @@
     pinentryFlavor = "gnome3";
   };
   programs.gpg.enable = true;
+
+  programs.mangohud = {
+    enable = true;
+    enableSessionWide = true;
+  };
 }

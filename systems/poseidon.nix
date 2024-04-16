@@ -32,4 +32,19 @@
   swapDevices = [ 
     { device = "/dev/disk/by-uuid/ddcea5ed-1ff9-4642-be70-793a3f52b629"; }
   ];
+
+  ### Graphics Setup ###
+
+  # Enable gaming software.
+  programs.steam.enable = true;
+  programs.gamemode = {
+    enable = true;
+    enableRenice = true;
+    settings = {
+      general = {
+        softrealtime = "auto";
+        renice = 10;
+      };
+    };
+  };
 }
