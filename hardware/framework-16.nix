@@ -13,7 +13,7 @@
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
   # Enable Power Profiles Daemon for improved battery life
-  # services.power-profiles-daemon.enable = true;
+  services.power-profiles-daemon.enable = true;
 
   # Allow microcode updates.
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
