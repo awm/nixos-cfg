@@ -25,6 +25,11 @@
 
     gnupg
     pinentry
+
+    lapce
+    ungoogled-chromium
+
+    discord
   ];
 
   programs.git = {
@@ -74,7 +79,7 @@
     enableCompletion = true;
     # TODO add your custom bashrc here
     bashrcExtra = ''
-      export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+      export PATH="$PATH:$HOME/.local/bin"
     '';
 
     # set some aliases, feel free to add more or remove some
@@ -104,4 +109,3 @@
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
-
