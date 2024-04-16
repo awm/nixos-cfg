@@ -1,34 +1,41 @@
+#
+# User Configuration for "awm"
+#
 { config, pkgs, ... }:
-
 {
+  ### Setup ###
+  
+  # This value determines the home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when a new home Manager release introduces backwards
+  # incompatible changes.
+  #
+  # You can update home Manager without changing this value. See
+  # the home Manager release notes for a list of state version
+  # changes in each release.
+  home.stateVersion = "23.11";
+
+  # Let home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  
   home.username = "awm";
   home.homeDirectory = "/home/awm";
 
-  # encode the file content in nix configuration file directly
-  # home.file.".xxx".text = ''
-  #     xxx
-  # '';
-
-  # set cursor size and dpi for 4k monitor
-  # xresources.properties = {
-  #   "Xcursor.size" = 16;
-  #   "Xft.dpi" = 172;
-  # };
+  ### User Packages ###
 
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # nix related
-    #
-    # it provides the command `nom` works just like `nix`
-    # with more details log output
-    nix-output-monitor
-
-    gnupg
-    pinentry
-
-    lapce
-    ungoogled-chromium
-
+    # Desktop essentials
+    ungoogled-chromium # Browser
+    
+    # Console tools
+    alacritty
+    starship
+    
+    # Development tools
+    lapce # Text editor
+    
+    # Gaming
     discord
   ];
 
@@ -47,7 +54,7 @@
     };
   };
 
-  # starship - an customizable prompt for any shell
+  # Starship - an customizable prompt for any shell
   programs.starship = {
     enable = true;
     # custom settings
@@ -59,7 +66,7 @@
     };
   };
 
-  # alacritty - a cross-platform, GPU-accelerated terminal emulator
+  # Alacritty - a cross-platform, GPU-accelerated terminal emulator
   programs.alacritty = {
     enable = true;
     # custom settings
@@ -74,6 +81,7 @@
     };
   };
 
+  # Bash shell.
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -88,24 +96,6 @@
     };
   };
   
+  # Enable keyring.
   services.gnome-keyring.enable = true;
-
-  programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentryFlavor = "gnome3";
-  };
-
-  # This value determines the home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update home Manager without changing this value. See
-  # the home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "23.11";
-
-  # Let home Manager install and manage itself.
-  programs.home-manager.enable = true;
 }

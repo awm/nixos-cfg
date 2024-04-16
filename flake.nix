@@ -1,3 +1,6 @@
+#
+# NixOS Flake Definition
+#
 {
   description = "NixOS";
 
@@ -21,9 +24,7 @@
       poseidon = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          # Import the previous configuration.nix we used,
-          # so the old configuration file still takes effect
-          ./configuration.nix
+          ./systems/poseidon.nix
 
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
@@ -31,7 +32,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.awm = import ./awm.nix;
+            home-manager.users.awm = import ./users/awm.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
