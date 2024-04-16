@@ -1,7 +1,7 @@
 #
 # System Configuration for "poseidon" (Framework 16 Laptop)
 #
-{ config, pkgs, ... }:
+{ ... }:
 {
   imports = [ 
     ./configuration.nix
@@ -18,7 +18,7 @@
   # Encrypted boot devices.
   boot.initrd.luks.devices."luks-8ff84575-eefa-4b42-b21e-b0f348657e4d".device = "/dev/disk/by-uuid/8ff84575-eefa-4b42-b21e-b0f348657e4d";
   boot.initrd.luks.devices."luks-0cfbff98-e4b7-43d8-8120-21cdc580554c".device = "/dev/disk/by-uuid/0cfbff98-e4b7-43d8-8120-21cdc580554c";
-  
+
   # Disk partitions.
   fileSystems."/" = { 
     device = "/dev/disk/by-uuid/7e5fd3c7-2f25-49bc-8dea-ad5cea5d9823";

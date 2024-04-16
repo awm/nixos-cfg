@@ -1,7 +1,7 @@
 #
 # Common System Configuration
 #
-{ config, pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
   ];
@@ -90,11 +90,6 @@
   environment.variables.EDITOR = "nano";
 
   # Configure system packages.
-  programs.gpg.enable = true;
-  services.gpg-agent = {
-    enable = true;
-    pinentryFlavor = "gnome3";
-  };
   programs.dconf.enable = true;
 
   # Remove some GNOME stuff that is undesirable.

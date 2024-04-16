@@ -1,10 +1,10 @@
 #
 # User Configuration for "awm"
 #
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   ### Setup ###
-  
+
   # This value determines the home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new home Manager release introduces backwards
@@ -17,9 +17,16 @@
 
   # Let home Manager install and manage itself.
   programs.home-manager.enable = true;
-  
+
+  # Home settings.
   home.username = "awm";
   home.homeDirectory = "/home/awm";
+
+  # Prefer dark mode.
+  dconf = {
+    enable = true;
+    settings."org/gnome/desktop/interface".color-scheme = "prefer-dark";
+  };
 
   ### User Packages ###
 
@@ -95,7 +102,14 @@
       glog = "git log --oneline --decorate --graph";
     };
   };
-  
+
   # Enable keyring.
   services.gnome-keyring.enable = true;
+
+  # Configure GPG.
+  services.gpg-agent = {
+    enable = true;
+    pinentryFlavor = "gnome3";
+  };
+  programs.gpg.enable = true;
 }
