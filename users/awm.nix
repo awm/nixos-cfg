@@ -22,10 +22,15 @@
   home.username = "awm";
   home.homeDirectory = "/home/awm";
 
-  # Prefer dark mode.
   dconf.settings = {
+    # Prefer dark mode.
     "org.gnome.desktop.interface" = {
       color-scheme = "prefer-dark";
+    };
+    # Enable VM connections.
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = ["qemu:///system"];
+      uris = ["qemu:///system"];
     };
   };
 

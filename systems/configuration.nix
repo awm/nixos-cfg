@@ -120,6 +120,6 @@
   users.users.awm = {
     isNormalUser = true;
     description = "Andrew MacIsaac";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 }
