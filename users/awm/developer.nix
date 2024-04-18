@@ -26,6 +26,7 @@
   # Additional packages.
   home.packages = with pkgs; [
     lapce # Experimental text editor
+    nixd  # Nix language server
   ];
 
   # Install VS Codium.
