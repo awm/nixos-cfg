@@ -19,7 +19,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   # Enable flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set your time zone.
   time.timeZone = "America/Vancouver";
@@ -73,7 +73,7 @@
 
   # Explicitly enable firewall.
   networking.firewall.enable = true;
-  
+
   # Use DHCP.
   networking.useDHCP = lib.mkDefault true;
 

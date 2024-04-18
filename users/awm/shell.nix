@@ -4,7 +4,7 @@
 { pkgs, ... }:
 {
   ### Setup ###
-  
+
   # Bash shell.
   programs.bash = {
     enable = true;
@@ -25,7 +25,7 @@
   # Additional packages.
   home.packages = with pkgs; [
     alacritty # Terminal app
-    starship  # Command prompt
+    starship # Command prompt
   ];
 
   # Starship - an customizable prompt for any shell

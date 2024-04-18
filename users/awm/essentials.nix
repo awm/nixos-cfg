@@ -7,10 +7,10 @@
 
   # Prefer dark mode.
   dconf.settings."org.gnome.desktop.interface".color-scheme = "prefer-dark";
-  
+
   # Enable keyring.
   services.gnome-keyring.enable = true;
-  
+
   # Configure GPG.
   services.gpg-agent = {
     enable = true;
@@ -22,7 +22,7 @@
 
   # Additional packages.
   home.packages = with pkgs; [
-    ungoogled-chromium  # Browser
-    speedcrunch         # Calculator
+    ungoogled-chromium # Browser
+    speedcrunch # Calculator
   ];
 }

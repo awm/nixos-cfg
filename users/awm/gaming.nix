@@ -10,7 +10,7 @@
   # Additional packages.
   home.packages = with pkgs; [
     discord # Messaging
-    
+
     protontricks
     protonup-qt
     gamescope

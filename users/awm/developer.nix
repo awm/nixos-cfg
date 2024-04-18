@@ -20,7 +20,7 @@
       };
     };
   };
-  
+
   ### User Packages ###
 
   # Additional packages.
@@ -28,7 +28,7 @@
     lapce # Experimental text editor
 
     # Nix formatting
-    nixd        # Nix language server
+    nixd # Nix language server
     nixpkgs-fmt # Nix formatter
   ];
 
