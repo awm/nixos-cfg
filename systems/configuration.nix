@@ -27,17 +27,22 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
   services.xserver = {
+    # Enable the X11 windowing system.
+    enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+
+    # Configure keymap in X11
     layout = "us";
     xkbVariant = "";
+
+    # Exclude packages.
+    excludePackages = [
+      pkgs.xterm
+    ];
   };
 
   # Enable CUPS to print documents.
@@ -100,12 +105,17 @@
   programs.dconf.enable = true;
 
   # Remove some GNOME stuff that is undesirable.
-  environment.gnome.excludePackages = (with pkgs; [
-    gnome-photos
-    gnome-tour
-  ]) ++ (with pkgs.gnome; [
+  environment.gnome.excludePackages = (with pkgs.gnome; [
+    pkgs.gnome-photos
+    pkgs.gnome-tour
+    pkgs.gnome-text-editor
+    pkgs.gnome-console
+    gnome-contacts
     gnome-music
     gnome-terminal
+    gnome-calculator
+    gnome-calendar
+    yelp # help
     epiphany # web browser
     geary # email reader
     totem # video player
@@ -113,9 +123,6 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
-    contacts
-    xterm
-    console
   ]);
 
   ### Users and Groups ###
