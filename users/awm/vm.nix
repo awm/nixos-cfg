@@ -11,9 +11,6 @@
     uris = ["qemu:///system"];
   };
 
-  # Enable VM manager.
-  programs.virt-manager.enable = true;
-
   ### User Packages ###
 
 }
