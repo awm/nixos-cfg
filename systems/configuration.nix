@@ -115,6 +115,7 @@
     gnome-terminal
     gnome-calculator
     gnome-calendar
+    gnome-maps
     yelp # help
     epiphany # web browser
     geary # email reader
