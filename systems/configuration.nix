@@ -113,6 +113,9 @@
     iagno # go game
     hitori # sudoku game
     atomix # puzzle game
+    contacts
+    xterm
+    console
   ]);
 
   ### Users and Groups ###
