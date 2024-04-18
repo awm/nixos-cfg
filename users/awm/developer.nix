@@ -26,7 +26,10 @@
   # Additional packages.
   home.packages = with pkgs; [
     lapce # Experimental text editor
-    nixd  # Nix language server
+
+    # Nix formatting
+    nixd        # Nix language server
+    nixpkgs-fmt # Nix formatter
   ];
 
   # Install VS Codium.
