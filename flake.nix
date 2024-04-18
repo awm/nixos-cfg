@@ -32,7 +32,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.awm = import ./users/awm.nix;
+            home-manager.users.awm = import ./users/awm;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
