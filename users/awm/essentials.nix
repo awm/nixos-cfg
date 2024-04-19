@@ -22,7 +22,10 @@
 
   # Additional packages.
   home.packages = with pkgs; [
-    ungoogled-chromium # Browser
+    # Browser
+    (ungoogled-chromium.override {
+      enableWideVine = true;
+    })
     speedcrunch # Calculator
   ];
 }
