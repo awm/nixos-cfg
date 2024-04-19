@@ -16,9 +16,11 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Flatpak source
+    flatpaks.url = "github:gmodena/nix-flatpak";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = { self, nixpkgs, home-manager, flatpaks, ... }@inputs: {
     nixosConfigurations = {
       # Framework 16
       poseidon = nixpkgs.lib.nixosSystem {
@@ -32,9 +34,8 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = inputs;
             home-manager.users.awm = import ./users/awm;
-
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
         ];
       };

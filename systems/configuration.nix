@@ -104,6 +104,9 @@
   # Configure system packages.
   programs.dconf.enable = true;
 
+  # Enable flatpaks.
+  services.flatpak.enable = true;
+
   # Remove some GNOME stuff that is undesirable.
   environment.gnome.excludePackages = (with pkgs.gnome; [
     pkgs.gnome-photos

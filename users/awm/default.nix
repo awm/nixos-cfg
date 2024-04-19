@@ -1,12 +1,14 @@
 #
 # User Configuration for "awm"
 #
-{ pkgs, ... }:
+{ pkgs, flatpaks, ... }:
 {
   ### Setup ###
 
   # Import sub-configurations.
   imports = [
+    flatpaks.homeManagerModules.nix-flatpak
+
     ./essentials.nix
     ./shell.nix
     ./developer.nix

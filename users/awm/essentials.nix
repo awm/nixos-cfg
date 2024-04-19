@@ -18,6 +18,11 @@
   };
   programs.gpg.enable = true;
 
+  # Ensure Flatpak apps are found.
+  xdg.systemDirs.data = [
+    "$HOME/.local/share/flatpak/exports/share"
+  ];
+
   ### User Packages ###
 
   # Additional packages.
@@ -27,5 +32,8 @@
       enableWideVine = true;
     })
     speedcrunch # Calculator
+  ];
+  services.flatpak.packages = [
+    "com.usebottles.bottles" # Bottles for Windows apps
   ];
 }
