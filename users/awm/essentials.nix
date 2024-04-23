@@ -32,6 +32,7 @@
       enableWideVine = true;
     })
     speedcrunch # Calculator
+    keepassxc # Password manager
   ];
   services.flatpak.packages = [
     "com.usebottles.bottles" # Bottles for Windows apps
