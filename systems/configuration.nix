@@ -96,6 +96,10 @@
 
     # Desktop features
     gnomeExtensions.appindicator
+
+    # Network file systems
+    cifs-utils
+    samba
   ];
 
   # Set default editor to nano.
@@ -128,6 +132,9 @@
     hitori # sudoku game
     atomix # puzzle game
   ]);
+
+  # Enable GNOME VFS support.
+  services.gvfs.enable = true;
 
   ### Users and Groups ###
 
