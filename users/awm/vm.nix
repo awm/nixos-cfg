@@ -1,5 +1,5 @@
 #
-# VM Configuration for "awm"
+# Virtualization Configuration for "awm"
 #
 { pkgs, ... }:
 {
@@ -13,4 +13,10 @@
 
   ### User Packages ###
 
+  # Additional packages.
+  home.packages = with pkgs; [
+    dive # Look into docker image layers
+    podman-tui # Status of containers in the terminal
+    podman-compose # Start group of containers for dev
+  ];
 }
