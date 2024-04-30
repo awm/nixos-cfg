@@ -112,6 +112,9 @@
     # Network file systems
     cifs-utils
     samba
+
+    # Webcam Confiiguration
+    guvcview
   ];
 
   # Set default editor to nano.
