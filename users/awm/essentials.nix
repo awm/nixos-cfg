@@ -33,6 +33,9 @@
     })
     speedcrunch # Calculator
     keepassxc # Password manager
+    libreoffice-fresh # LibreOffice suite
+    hunspell # Spellchecker
+    hunspellDicts.en_CA # Canadian English spellcheck dictionary
   ];
   services.flatpak.packages = [
     "com.usebottles.bottles" # Bottles for Windows apps
