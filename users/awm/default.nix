@@ -12,6 +12,7 @@
     ./essentials.nix
     ./shell.nix
     ./developer.nix
+    ./hwdev.nix
     ./vm.nix
     ./gaming.nix
   ];
