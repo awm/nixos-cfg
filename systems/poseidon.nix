@@ -13,6 +13,13 @@
   # Set host name.
   networking.hostName = "poseidon"; # Define your hostname.
 
+  # Custom hosts entries.
+  networking.hosts = {
+    "192.168.4.45" = ["arda.local"];
+    "192.168.4.46" = ["xoa.local"];
+    "192.168.4.49" = ["vaire.local"];
+  };
+
   ### Disk Setup ###
 
   # Encrypted boot devices.
