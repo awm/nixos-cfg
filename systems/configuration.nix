@@ -89,6 +89,10 @@
   # Use DHCP.
   networking.useDHCP = lib.mkDefault true;
 
+  # Install and configure Wireshark for packet capture
+  programs.wireshark.enable = true;
+  programs.wireshark.package = pkgs.wireshark;
+
   ### System Packages ###
 
   # Install system packages.
@@ -157,6 +161,6 @@
   users.users.awm = {
     isNormalUser = true;
     description = "Andrew MacIsaac";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "wireshark" ];
   };
 }
