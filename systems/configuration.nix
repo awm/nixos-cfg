@@ -104,6 +104,7 @@
 
     # Security and authentication
     gnupg
+    openssl
     pinentry
 
     # Desktop features
