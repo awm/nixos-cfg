@@ -30,6 +30,9 @@
     # Nix formatting
     nixd # Nix language server
     nixpkgs-fmt # Nix formatter
+
+    # Network tools
+    nmap
   ];
 
   # Install VS Codium.
