@@ -36,6 +36,7 @@
     libreoffice-fresh # LibreOffice suite
     hunspell # Spellchecker
     hunspellDicts.en_CA # Canadian English spellcheck dictionary
+    pinta # Simple paint application
   ];
   services.flatpak.packages = [
     "com.usebottles.bottles" # Bottles for Windows apps
