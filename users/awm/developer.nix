@@ -33,6 +33,10 @@
 
     # Network tools
     nmap
+
+    # Python
+    python3
+    pipx
   ];
 
   # Install VS Codium.
