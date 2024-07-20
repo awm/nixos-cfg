@@ -60,4 +60,11 @@
   # Enable virtualization features.
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+
+  ### Devices ###
+
+  services.udev.extraRules = ''
+    # FTDI USB interfaces
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", TAG+="uaccess"
+  '';
 }
