@@ -25,8 +25,6 @@
 
   # Additional packages.
   home.packages = with pkgs; [
-    lapce # Experimental text editor
-
     # Nix formatting
     nixd # Nix language server
     nixpkgs-fmt # Nix formatter
