@@ -37,6 +37,9 @@
     # Python
     python3
     pipx
+
+    # Diagramming
+    graphviz
   ];
 
   # Install VS Codium.
