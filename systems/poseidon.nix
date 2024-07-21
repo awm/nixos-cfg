@@ -17,7 +17,12 @@
   networking.hosts = {
     "192.168.4.45" = ["arda.local"];
     "192.168.4.46" = ["xoa.local"];
-    "192.168.4.49" = ["vaire.local" "components.sigmadraconis.ca" "traefik.sigmadraconis.ca"];
+    "192.168.4.49" = [
+      "vaire.local"
+      "components.sigmadraconis.ca"
+      "traefik.sigmadraconis.ca"
+      "assets.sigmadraconis.ca"
+    ];
   };
 
   ### Disk Setup ###
