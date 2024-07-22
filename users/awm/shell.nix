@@ -56,4 +56,7 @@
       selection.save_to_clipboard = true;
     };
   };
+
+  # Direnv for per-directory environments
+  programs.direnv.enable = true;
 }
