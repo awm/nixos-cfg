@@ -10,7 +10,7 @@
     flatpaks.homeManagerModules.nix-flatpak
 
     ./essentials.nix
-    ./shell.nix
+    ./terminal.nix
     ./developer.nix
     ./hwdev.nix
     ./vm.nix

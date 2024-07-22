@@ -1,5 +1,5 @@
 #
-# Shell Configuration for "awm"
+# Terminal Configuration for "awm"
 #
 { pkgs, ... }:
 {
