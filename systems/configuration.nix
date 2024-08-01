@@ -131,6 +131,12 @@
   # Enable flatpaks.
   services.flatpak.enable = true;
 
+  # Enable direct execution of AppImages
+  programs.appimage = {
+    enable = true;
+    binfmt = true;
+  };
+
   # Remove some GNOME stuff that is undesirable.
   environment.gnome.excludePackages = (with pkgs.gnome; [
     pkgs.gnome-photos
