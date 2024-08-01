@@ -73,5 +73,7 @@
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", TAG+="uaccess"
     # Saleae Logic devices
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0925", ATTRS{idProduct}=="3881", MODE="0666", TAG+="uaccess"
+    # Raspberry Pi Debug Probe
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="2e8a", ATTRS{idProduct}=="000c", MODE="0666", TAG+="uaccess"
   '';
 }
