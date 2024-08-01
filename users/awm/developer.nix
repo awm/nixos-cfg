@@ -32,10 +32,6 @@
     # Network tools
     nmap
 
-    # Python
-    python3
-    pipx
-
     # Diagramming
     graphviz
   ];
