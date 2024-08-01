@@ -24,7 +24,6 @@
 
   # Additional packages.
   home.packages = with pkgs; [
-    alacritty # Terminal app
     starship # Command prompt
   ];
 
@@ -40,20 +39,8 @@
     };
   };
 
-  # Alacritty - a cross-platform, GPU-accelerated terminal emulator
-  programs.alacritty = {
-    enable = true;
-    # custom settings
-    settings = {
-      env.TERM = "xterm-256color";
-      font = {
-        size = 12;
-        draw_bold_text_with_bright_colors = true;
-      };
-      scrolling.multiplier = 5;
-      selection.save_to_clipboard = true;
-    };
-  };
+  # Use WezTerm as a terminal application
+  programs.wezterm.enable = true;
 
   # Direnv for per-directory environments
   programs.direnv.enable = true;
