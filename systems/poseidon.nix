@@ -71,5 +71,7 @@
   services.udev.extraRules = ''
     # FTDI USB interfaces
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6010", MODE="0666", TAG+="uaccess"
+    # Saleae Logic devices
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="0925", ATTRS{idProduct}=="3881", MODE="0666", TAG+="uaccess"
   '';
 }
