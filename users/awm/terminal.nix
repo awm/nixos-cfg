@@ -40,7 +40,12 @@
   };
 
   # Use WezTerm as a terminal application
-  programs.wezterm.enable = true;
+  programs.wezterm = {
+    enable = true;
+    extraConfig = ''return {
+      xcursor_theme = 'Adwaita',
+    }'';
+  };
 
   # Direnv for per-directory environments
   programs.direnv.enable = true;
