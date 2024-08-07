@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     gtkwave # Waveform viewer
     saleae-logic-2 # Saleae Logic analyzer application
+    tio # Serial console application
   ];
   services.flatpak.packages = [
     "org.kicad.KiCad" # KiCAD for EDA
