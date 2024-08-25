@@ -39,6 +39,7 @@
     pinta # Simple paint application
     deja-dup # Backup application
     poppler_utils # PDF conversion tools
+    amberol # Music player
   ];
   services.flatpak.packages = [
     "com.usebottles.bottles" # Bottles for Windows apps
