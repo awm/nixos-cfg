@@ -15,6 +15,7 @@
     ./hwdev.nix
     ./vm.nix
     ./gaming.nix
+    ./media.nix
   ];
 
   home = {
