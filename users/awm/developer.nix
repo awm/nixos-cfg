@@ -18,6 +18,9 @@
       init = {
         defaultBranch = "main";
       };
+      core = {
+        editor = "codium --wait";
+      };
     };
   };
 
