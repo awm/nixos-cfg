@@ -29,9 +29,7 @@
   boot.kernelModules = [ "amdgpu" "kvm-amd" ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ "amdgpu.abmlevel=1" ];
-
-  # For now, ensure we are at least running a 6.8 kernel.
-  boot.kernelPackages = pkgs.linuxPackages_6_8;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   ### System Packages ###
 
