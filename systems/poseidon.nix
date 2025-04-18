@@ -1,7 +1,7 @@
 #
 # System Configuration for "poseidon" (Framework 16 Laptop)
 #
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./configuration.nix
@@ -63,7 +63,10 @@
   ### Virtualization ###
 
   # Enable virtualization features.
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  };
   programs.virt-manager.enable = true;
 
   ### Devices ###
