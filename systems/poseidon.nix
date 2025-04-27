@@ -15,6 +15,7 @@
 
   # Custom hosts entries.
   networking.hosts = {
+    "192.168.4.37" = ["connect.local"];
     "192.168.4.45" = ["arda.local"];
     "192.168.4.46" = ["xoa.local"];
     "192.168.4.49" = [
