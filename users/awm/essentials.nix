@@ -37,7 +37,7 @@
     hunspell # Spellchecker
     hunspellDicts.en_CA # Canadian English spellcheck dictionary
     deja-dup # Backup application
-    poppler_utils # PDF conversion tools
+    poppler-utils # PDF conversion tools
   ];
   services.flatpak.packages = [
     "com.usebottles.bottles" # Bottles for Windows apps

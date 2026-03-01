@@ -51,13 +51,11 @@
   # Graphics packages
   hardware.opengl = {
     enable = true;
-    driSupport.enable = true;
     extraPackages = with pkgs; [
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       mangohud
       gamescope
-      amdvlk
     ];
     extraPackages32 = with pkgs; [
       mangohud

@@ -11,7 +11,6 @@
   home.packages = with pkgs; [
     pinta # Simple paint application
     amberol # Music player
-    openshot-qt # Video editor
     celluloid # Video player
   ];
 }

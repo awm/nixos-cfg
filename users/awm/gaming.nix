@@ -21,7 +21,6 @@
         mangohud
       ];
     })
-    gnomeExtensions.gamemode-indicator-in-system-settings
   ];
 
   # GPU statistics HUD
