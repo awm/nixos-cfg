@@ -140,26 +140,22 @@
   };
 
   # Remove some GNOME stuff that is undesirable.
-  environment.gnome.excludePackages = (with pkgs.gnome; [
-    pkgs.gnome-photos
-    pkgs.gnome-tour
-    pkgs.gnome-text-editor
-    pkgs.gnome-console
-    gnome-contacts
-    gnome-music
-    gnome-terminal
-    gnome-calculator
-    gnome-calendar
-    gnome-maps
-    yelp # help
-    epiphany # web browser
-    geary # email reader
-    totem # video player
-    tali # poker game
-    iagno # go game
-    hitori # sudoku game
-    atomix # puzzle game
-  ]);
+  environment.gnome = {
+    excludePackages = (with pkgs; [
+      gnome-photos
+      gnome-tour
+      gnome-text-editor
+      gnome-console
+      gnome-contacts
+      gnome-music
+      gnome-terminal
+      gnome-calculator
+      gnome-calendar
+      gnome-maps
+      yelp # help
+      epiphany # web browser
+    ]);
+  };
 
   # Enable GNOME VFS support.
   services.gvfs.enable = true;
