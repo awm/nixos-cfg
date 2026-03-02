@@ -8,19 +8,21 @@
   # Git configuration.
   programs.git = {
     enable = true;
-    userName = "Andrew MacIsaac";
-    userEmail = "macisaac.andrew@gmail.com";
+    settings = {
+      user = {
+        name = "Andrew MacIsaac";
+        email = "macisaac.andrew@gmail.com";
+        init = {
+          defaultBranch = "main";
+        };
+        core = {
+          editor = "codium --wait";
+        };
+      };
+    };
     signing = {
       signByDefault = true;
       key = null;
-    };
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      core = {
-        editor = "codium --wait";
-      };
     };
   };
 
@@ -43,7 +45,7 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium.fhs;
-    extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+    profiles.default.extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
         name = "sync-settings";
         publisher = "zokugun";
