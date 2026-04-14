@@ -42,8 +42,10 @@
   # Use WezTerm as a terminal application
   programs.wezterm = {
     enable = true;
+    enableBashIntegration = true;
     extraConfig = ''return {
       xcursor_theme = 'Adwaita',
+      window_decorations = 'TITLE | RESIZE | INTEGRATED_BUTTONS',
     }'';
   };
 
