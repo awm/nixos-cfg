@@ -10,20 +10,43 @@
 
   ### Network Setup ###
 
-  # Set host name.
-  networking.hostName = "poseidon"; # Define your hostname.
+  networking = {
+    # Set host name.
+    hostName = "poseidon"; # Define your hostname.
 
-  # Custom hosts entries.
-  networking.hosts = {
-    "192.168.4.37" = ["connect.local"];
-    "192.168.4.45" = ["arda.local"];
-    "192.168.4.46" = ["xoa.local"];
-    "192.168.4.49" = [
-      "vaire.local"
-      "components.sigmadraconis.ca"
-      "traefik.sigmadraconis.ca"
-      "assets.sigmadraconis.ca"
-    ];
+    # Custom hosts entries.
+    hosts = {
+      "10.12.0.1" = ["pihole.local"];
+      "10.12.0.2" = ["arda-mgmt.local"];
+
+      "10.12.0.101" = ["switch-hallway.local"];
+      "10.12.0.102" = ["switch-servers.local"];
+      "10.12.0.103" = ["switch-workshop.local"];
+    };
+
+    # VLAN configuration
+    networkmanager.ensureProfiles.profiles = {
+      vlan-mgmt0 = {
+        connection = {
+          id = "vlan-mgmt0";
+          interface-name = "mgmt0";
+          type = "vlan";
+          uuid = "47c8b669-07b5-42b4-8b65-32116ce433e0";
+        };
+        ipv4 = {
+          address1 = "10.12.0.3/24";
+          method = "manual";
+        };
+        ipv6 = {
+          addr-gen-mode = "default";
+          method = "auto";
+        };
+        vlan = {
+          flags = "1";
+          id = "2";
+        };
+      };
+    };
   };
 
   # Network printers.
