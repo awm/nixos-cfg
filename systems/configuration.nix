@@ -165,6 +165,6 @@
   users.users.awm = {
     isNormalUser = true;
     description = "Andrew MacIsaac";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "wireshark" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "wireshark" "dialout" ];
   };
 }
