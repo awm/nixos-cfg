@@ -36,6 +36,7 @@
 
     # Network tools
     nmap
+    ipmiview
 
     # Diagramming
     graphviz
