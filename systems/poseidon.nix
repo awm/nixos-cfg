@@ -16,6 +16,8 @@
 
     # Custom hosts entries.
     hosts = {
+      "10.11.0.1" = ["wifi-hallway.local"];
+
       "10.12.0.1" = ["pihole.local"];
       "10.12.0.2" = ["arda-mgmt.local"];
 
