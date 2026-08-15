@@ -12,12 +12,12 @@
       user = {
         name = "Andrew MacIsaac";
         email = "macisaac.andrew@gmail.com";
-        init = {
-          defaultBranch = "main";
-        };
-        core = {
-          editor = "codium --wait";
-        };
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      core = {
+        editor = "codium --wait";
       };
     };
     signing = {
@@ -46,13 +46,5 @@
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium.fhs;
-    profiles.default.extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-      {
-        name = "sync-settings";
-        publisher = "zokugun";
-        version = "0.16.0";
-        sha256 = "97b4b3bf8b6d5e8c31b86becb11cef7a5eaf5fcb950f827b0e55c9efd23b6fc4";
-      }
-    ];
   };
 }
