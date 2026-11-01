@@ -12,5 +12,6 @@
     pinta # Simple paint application
     amberol # Music player
     celluloid # Video player
+    handbrake # Video convertor
   ];
 }
