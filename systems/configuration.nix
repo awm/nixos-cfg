@@ -120,8 +120,13 @@
     cifs-utils
     samba
 
-    # Webcam Confiiguration
+    # Webcam Configuration
     guvcview
+
+    # Digital camera tools
+    libgphoto2
+    gphoto2
+    gphoto2fs
   ];
 
   # Set default editor to nano.
@@ -159,6 +164,12 @@
 
   # Enable GNOME VFS support.
   services.gvfs.enable = true;
+
+  # Enable removable media.
+  services.udisks2.enable = true;
+
+  # Enable digital camera access
+  programs.gphoto2.enable = true;
 
   ### Users and Groups ###
 
